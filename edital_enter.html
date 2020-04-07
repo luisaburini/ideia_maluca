@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="reddot">
 
 <head>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -7,22 +7,13 @@
 
 <style>
 
-body {
-  font-family: Avenir, sans-serif;
-}
 /* Grid */
 .grid {
 	display: grid;
 }
 
+
 /* Grid Items */
-.sad {
-	grid-column-start: 4;
-	grid-row-start: 13;
-	grid-column-end: 4;
-	grid-row-end: 13; 
-	transform: rotateZ(270deg);
-}
 
 .primeiro {
 	grid-column-start: 1;
@@ -31,26 +22,63 @@ body {
 	grid-row-end: 1;
 }
 
+.semcursor {
+	cursor: none;
+}
+
+.sad {
+	grid-column-start: 5;
+	grid-row-start: 13;
+	grid-column-end: 5;
+	grid-row-end: 13; 
+	transform: rotateZ(270deg);
+}
+
+.exmissfebem {
+	grid-column-start: 3;
+	grid-row-start: 12;
+	grid-column-end: 3;
+	grid-row-end: 12; 
+}
+
+
+
 .ultimo {
 	grid-column-start: 9;
-	grid-row-start: 16;
+	grid-row-start: 14;
 	grid-column-end: 9;
-	grid-row-end: 16;
+	grid-row-end: 14;
 }
 
 
 .capitalismo {
-	grid-column-start: 3;
+	grid-column-start: 1;
 	grid-row-start: 12;
-	grid-column-end: 3;
+	grid-column-end: 1;
 	grid-row-end: 12;
+	align-self: right;
 }
 
 .batalha {
-	grid-column-start: 3;
+	grid-column-start: 2;
 	grid-row-start: 13; 
-	grid-column-end: 3;
+	grid-column-end: 2;
 	grid-row-end: 13;
+}
+
+.traplev1 {
+	grid-column-start: 5;
+	grid-row-start: 12; 
+	grid-column-end: 5;
+	grid-row-end: 12;
+}
+
+.traplev2 {
+	grid-column-start: 1;
+	grid-row-start: 13; 
+	grid-column-end: 1;
+	grid-row-end: 13;
+	cursor: 
 }
 
 .nome {
@@ -62,20 +90,77 @@ body {
 	grid-row-start: 12;
 	grid-column-end: 2;
 	grid-row-end: 12; 
+	align-self: center;
+	cursor: none;
 }
 
 .respiracao {
 	grid-column-start: 3;
-	grid-row-start: 14;
+	grid-row-start: 13;
 	grid-column-end: 3;
-	grid-row-end: 14;
+	grid-row-end: 13;
 }
 
 .anuncieaqui {
 	position: fixed;
-	left: 29%;
+	left: 50%;
 	bottom: 1%;
 	padding: 5px;
+}
+
+/* Firefox old*/
+@-moz-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+
+@-webkit-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+/* IE */
+@-ms-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+/* Opera and prob css3 final iteration */
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+.blink-image {
+    -moz-animation: blink normal 2s infinite ease-in-out; /* Firefox */
+    -webkit-animation: blink normal 2s infinite ease-in-out; /* Webkit */
+    -ms-animation: blink normal 2s infinite ease-in-out; /* IE */
+    animation: blink normal 2s infinite ease-in-out; /* Opera and prob css3 final iteration */
 }
 
 
@@ -98,31 +183,39 @@ body {
 .curadoria {
 	grid-column-start: 1;
 	grid-row-start: 1;
-	grid-column-end: 4;
-	grid-row-end: 12; 
+	grid-column-end: 3;
+	grid-row-end: 10; 
 	font-family: monospace;
 	color: #ff0000;
 	font-size: 14px;
 }
 
+.vernissage {
+	color: #ff0000;
+	background: #ffffff;
+	width: 200px;
+	height: 100px;
+	font-size: 20px;
+}
+
 .comentario {
-	grid-column-start: 5;
-	grid-row-start: 3;
-	grid-column-end: 5;
-	grid-row-end: 5; 
+	grid-column-start: 8;
+	grid-row-start: 15;
+	grid-column-end: 8;
+	grid-row-end: 15;
 	font-family: monospace;
 	color: #ff0000;
 	font-size: 14px;	
 }
 
-.insta {
-
+.grid {
+	margin-left: 500px;
+	margin-top: 100px;
+	grid-gap: 75px;
 }
 
-.grid {
-	margin-left: 550px;
-	margin-top: 0px;
-	grid-gap: 70px;
+.reddot{
+	cursor: url("https://live.staticflickr.com/65535/49744650617_cf1303f4ed_t.jpg"),auto;
 }
 
 h1 {
@@ -139,48 +232,45 @@ body {
 
 </style>
 
-<title>Swipe Life</title>
-
-
+<title>Lorem Ipsum</title>
 
 <body>
 
+<h1 class="reddot" >Lorem Ipsum</h1>
 
-<h1>Lorem Ipsum</h1>
-
-	<div class="anuncieaqui" id="anuncieaqui">
-		<a href="mailto:kauegarcia@gmail.com?subject=Anuncie Aqui&body=Olá, gostaria de anunciar meu trabalho">
-		<img src="https://live.staticflickr.com/65535/49739246716_c5a76ed919_b.jpg"  height="150px" max-height="200px" alt="anuncie_aqui"></img>
-		</a>
-	</div>
+<div class="anuncieaqui" id="anuncieaqui">
+	<a href="mailto:kauegarcia@gmail.com?subject=Anuncie Aqui&body=Olá, gostaria de anunciar meu trabalho">
+	<img class="reddot" src="https://live.staticflickr.com/65535/49739246716_c5a76ed919_b.jpg"  height="150px" max-height="200px" alt="Anuncie Aqui"></img>
+	</a>
+</div>
 
 <div class="grid">
 
 	<div class="batalha">
-		<iframe  width="640" height="360" src="https://www.youtube.com/embed/TtUZBAvXBwk" frameborder="0" allow="autoplay; loop">
+		<iframe  width="640" height="480" src="https://www.youtube.com/embed/TtUZBAvXBwk" frameborder="0" allow="autoplay; loop">
 		</iframe>
 	</div>
 
 	<div class="capitalismo">
-		<a  href="https://url.gratis/fvEPX">
-		 <img  alt="botripe" src="https://pablovieira.weebly.com/uploads/9/9/5/9/99596286/2_orig.jpg"
-		 width=360" height="360">
+		<a  href="https://url.gratis/fvEPX" target="_blank">
+		 <img  class="reddot" src="https://pablovieira.weebly.com/uploads/9/9/5/9/99596286/2_orig.jpg" alt="Capitalismo">
 		</a>
 	</div>
 
 	<div class="tripe">
-		<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=421722217/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/transparent=true/" seamless><a href="http://banda-ostensiva.bandcamp.com/album/trip-macroecon-mico">Tripé Macroeconômico by Banda Ostensiva</a></iframe>
+		<iframe style="cursor: none; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=421722217/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/transparent=true/" seamless><a class="semcursor" href="http://banda-ostensiva.bandcamp.com/album/trip-macroecon-mico">Tripé Macroeconômico by Banda Ostensiva</a></iframe>
 	</div>
 
 
 	<div class="sad"> 
-		<iframe  src="https://player.vimeo.com/video/313383354" width="640" height="360"  allow="autoplay; loop">
+		<iframe  class="semcursor" src="https://player.vimeo.com/video/313383354" width="640px" height="360px"  allow="autoplay; loop">
 		</iframe>
 	</div>
 
 
 	<div class="respiracao">
-	<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2748401591/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/transparent=true/" seamless><a href="http://banda-ostensiva.bandcamp.com/album/minist-rio-da-sa-de-adverte">Ministério da Saúde adverte by Banda Ostensiva</a></iframe>
+	<iframe class="semcursor" style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2748401591/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/transparent=true/" allow="autoplay" seamless><a href="http://banda-ostensiva.bandcamp.com/album/minist-rio-da-sa-de-adverte">Ministério da Saúde adverte by Banda Ostensiva</a></iframe>
+
 	</div>
 
 	<div class="curadoria">
@@ -204,6 +294,14 @@ Onde posso arranjar algum?
 Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maior parte sofreu alterações de alguma forma, pela injecção de humor, ou de palavras aleatórias que nem sequer parecem suficientemente credíveis. Se vai usar uma passagem do Lorem Ipsum, deve ter a certeza que não contém nada de embaraçoso escondido no meio do texto. Todos os geradores de Lorem Ipsum na Internet acabam por repetir porções de texto pré-definido, como necessário, fazendo com que este seja o primeiro verdadeiro gerador na Internet. Usa um dicionário de 200 palavras em Latim, combinado com uma dúzia de modelos de frases, para gerar Lorem Ipsum que pareçam razoáveis. Desta forma, o Lorem Ipsum gerado é sempre livre de repetição, ou de injecção humorística, etc.
 
 	</p>
+	<button class="vernissage reddot" id="vernissage"  onclick="gotoVernissage()">
+	Vernissage
+	<script>
+	function gotoVernissage() {
+		window.open('https://hangouts.google.com/call/Vbo8Omm_52GU9DYclHZJAEEE', 'Vernissage', 'popup');
+	}	
+	</script>
+	</button>
 	</div>
 
     	<div class="comentario">
@@ -219,14 +317,30 @@ Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maio
 		</label>
 		<textarea id="comentario" color="#ff0000" type="text"
 		     name="Ntext" size="15"></textarea>
-		<input class="botao" id="sent" type="submit"  
+		<input class="botao" id="sent" type="button"  
 		     value="Enviar"> 
+		
 	</div>
 
-	 <div id="insta-feed" class="insta"> 
-	</div> 
+	<div id="instagram-feed-demo" class="exmissfebem">
+	<a href="https://www.instagram.com/ex_miss_febem3/" target="_blank">
+	<img class="reddot" src="https://live.staticflickr.com/65535/49743892906_e33a013436_o.jpg">
+	</img>
+	</a>
+	</div>
+
+	<div class="traplev1">
+	<img src="https://traplev.hotglue.me/?retratoscomesempropina.head.147611798347">
+	</img>
+	</div>
+
+	<div class="traplev2">
+	<img src="https://traplev.hotglue.me/?retratoscomesempropina.head.147611937053">
+	</img>
+	</div>
 
 	<div class="primeiro">
+	<p color="#ffffff">bem-vinde</p>
 	</div>
 
 	<div class="ultimo">
@@ -236,22 +350,63 @@ Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maio
 </div>
 
   <script>
-	function abreEscobar (String urlStr, String name) {
-		 window.open(urlStr, name,'width=1024, height=363,resizable=1,popup, top=0, left=0');
-	};
 
-	setTimeout(() => abreEscobar("https://live.staticflickr.com/65535/49739524602_b19f98afa3_b.jpg"), 1500);
-	setTimeout(() => window.open("https://live.staticflickr.com/65535/49739201231_0a1d90f1dc_b.jpg",'Apologia2','width=1024, height=363,resizable=1,popup, top=450, left=0'), 1500);
-	setTimeout(() => window.open("https://live.staticflickr.com/65535/49738653223_c539f96699_b.jpg",'Apologia3','width=1024, height=363,resizable=1,popup, top=450, left=1024'), 1500);
-	setTimeout(() => window.open("https://live.staticflickr.com/65535/49739201281_ef847475fa_b.jpg",'Apologia4','width=1024, height=363,resizable=1,popup, top=0, left=1024'), 1500);
 
+	/*
+	function abrirEscobar() {
+		var wCocaina = window.open("https://live.staticflickr.com/65535/49739524602_b19f98afa3_b.jpg", 'ApologiaCocaina', 'width=1023, height=363,resizable=0,popup, top=450, left=0')		
+		//wCocaina.write("<title>Apologia - Raphael Escobar</title><img src='https://live.staticflickr.com/65535/49739524602_b19f98afa3_b.jpg'></img>");
+		wCocaina.title("Apologia - Raphael Escobar")
+		//wCocaina.close();
+
+		var wBeck = window.open("https://live.staticflickr.com/65535/49739201231_0a1d90f1dc_b.jpg", "ApologiaBeck", 'width=1023, height=363,resizable=0,popup, top=450, left=0'));
+		wBeck.write("<title>Apologia - Raphael Escobar</title><img src='https://live.staticflickr.com/65535/49739201231_0a1d90f1dc_b.jpg'></img>");
+		//wBeck.close();
+
+		var wDoce = window.open("https://live.staticflickr.com/65535/49738653223_c539f96699_b.jpg", "ApologiaDoce");
+		wDoce.write("<title>Apologia - Raphael Escobar</title><img src='https://live.staticflickr.com/65535/49738653223_c539f96699_b.jpg'></img>");
+		//wDoce.close();
+
+		var wCrack = window.open("https://live.staticflickr.com/65535/49739201281_ef847475fa_b.jpg", "ApologiaCrack", );
+		wCrack.write("<title>Apologia - Raphael Escobar</title><img src='https://live.staticflickr.com/65535/49739201281_ef847475fa_b.jpg'></img>");
+		//wCrack.close();
+	}*/
+
+	 setTimeout(function(){
+		var wCocaina = window.open("https://live.staticflickr.com/65535/49739524602_b19f98afa3_b.jpg", 'ApologiaCocaina', 'width=1023, height=363,resizable=0,popup, top=450, left=0')		
+		wCocaina.document.body.innerHTML = "<title>Apologia - Raphael Escobar</title><img src='https://live.staticflickr.com/65535/49739524602_b19f98afa3_b.jpg'></img>";
+
+	 }, 1500);
+
+	 setTimeout(function(){
+		var wBeck = window.open("https://live.staticflickr.com/65535/49739201231_0a1d90f1dc_b.jpg", "ApologiaBeck", 'width=1023, height=363,resizable=0,popup, top=450, left=0');
+		wBeck.title("Apologia - Raphael Escobar");
+		wBeck.close();
+
+	 }, 1500);
+
+	 setTimeout(function(){
+		var wDoce = window.open("https://live.staticflickr.com/65535/49738653223_c539f96699_b.jpg", "ApologiaDoce", 'width=1023, height=363,resizable=0,popup, top=450, left=1024');
+		wDoce.title("Apologia - Raphael Escobar");
+		wDoce.close();
+	 }, 1500);
+
+	 setTimeout(function(){
+		var wCrack = window.open("https://live.staticflickr.com/65535/49739201281_ef847475fa_b.jpg", "ApologiaCrack", 'width=1023, height=363,resizable=0,popup, top=0, left=1024');
+		wCrack.write("Apologia - Raphael Escobar"));
+		wCrack.close();
+	 }, 1500);
+	
+	//setTimeout(() => window.open("https://live.staticflickr.com/65535/49739201231_0a1d90f1dc_b.jpg","Apologia2",'width=1023, height=363,resizable=0,popup, top=450, left=0'), 1500);
+	//setTimeout(() => window.open("https://live.staticflickr.com/65535/49738653223_c539f96699_b.jpg","Apologia3",'width=1023, height=363,resizable=0,popup, top=450, left=1024'), 1500);
+	//setTimeout(() => window.open("https://live.staticflickr.com/65535/49739201281_ef847475fa_b.jpg","Apologia4",'width=1023, height=363,resizable=0,popup, top=0, left=1024'), 1500);
   </script>
 
 
 
 <div class="termino">
-	<a href="https://chat.whatsapp.com/IMCPtV8CwU19nneTYDMQsw">
-	<img width="200px" max-width="250px" src="https://live.staticflickr.com/65535/49738653253_372aa83322_b.jpg">
+	<a href="https://chat.whatsapp.com/IMCPtV8CwU19nneTYDMQsw" target="_blank">
+	<img class="blink-image reddot" width="200px" max-width="250px" src="https://live.staticflickr.com/65535/49738653253_372aa83322_b.jpg">
 	</img>
 	</a>
 </div>
