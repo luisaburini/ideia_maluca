@@ -2,7 +2,10 @@
 <html class="reddot">
 
 <head>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <style>
@@ -10,8 +13,8 @@
 /* Grid */
 .grid {
 	display: grid;
+	grid-gap: 50px;
 }
-
 
 /* Grid Items */
 
@@ -20,90 +23,84 @@
 	grid-row-start: 1;
 	grid-column-end: 1;
 	grid-row-end: 1;
+	z-index: -1;
 }
 
 .semcursor {
 	cursor: none;
 }
 
-.sad {
-	grid-column-start: 5;
-	grid-row-start: 13;
-	grid-column-end: 5;
-	grid-row-end: 13; 
+.sad {	
+	grid-column-start: 4;
+	grid-row-start: 11;
+	grid-column-end: 4;
+	grid-row-end: 12; 
 	transform: rotateZ(270deg);
+	padding-top: 100px;
 }
 
 .exmissfebem {
-	grid-column-start: 3;
+	grid-column-start: 5;
 	grid-row-start: 12;
-	grid-column-end: 3;
+	grid-column-end: 5;
 	grid-row-end: 12; 
 }
 
 
-
 .ultimo {
-	grid-column-start: 9;
-	grid-row-start: 14;
-	grid-column-end: 9;
-	grid-row-end: 14;
+	grid-column-start: 22;
+	grid-row-start: 40;
+	grid-column-end: 22;
+	grid-row-end: 40;
 }
 
 
 .capitalismo {
-	grid-column-start: 1;
-	grid-row-start: 12;
-	grid-column-end: 1;
-	grid-row-end: 12;
-	align-self: right;
+	grid-column-start: 6;
+	grid-row-start: 15;
+	grid-column-end: 6;
+	grid-row-end: 17;
 }
 
 .batalha {
-	grid-column-start: 2;
+	grid-column-start: 7;
 	grid-row-start: 13; 
-	grid-column-end: 2;
+	grid-column-end: 8;
 	grid-row-end: 13;
 }
 
 .traplev1 {
-	grid-column-start: 5;
+	grid-column-start: 6;
 	grid-row-start: 12; 
-	grid-column-end: 5;
+	grid-column-end: 6;
 	grid-row-end: 12;
-}
-
-.traplev2 {
-	grid-column-start: 1;
-	grid-row-start: 13; 
-	grid-column-end: 1;
-	grid-row-end: 13;
-	cursor: 
-}
-
-.nome {
-	width: auto;
+	align-self: left;
 }
 
 .tripe {
-	grid-column-start: 2;
-	grid-row-start: 12;
-	grid-column-end: 2;
-	grid-row-end: 12; 
-	align-self: center;
-	cursor: none;
+	grid-column-start: 4;
+	grid-row-start: 16;
+	grid-column-end: 4;
+	grid-row-end: 16; 
 }
 
 .respiracao {
-	grid-column-start: 3;
+	grid-column-start: 6;
 	grid-row-start: 13;
-	grid-column-end: 3;
+	grid-column-end: 6;
 	grid-row-end: 13;
 }
 
 .anuncieaqui {
+	grid-column-start: 4;
+	grid-row-start: 13;
+	grid-column-end: 5;
+	grid-row-end: 15;
+}
+
+.apologia {
 	position: fixed;
-	left: 50%;
+	left: 32%;
 	bottom: 1%;
 	padding: 5px;
 }
@@ -168,7 +165,7 @@
 	position: fixed;
 	right: 85%;
 	top: 15%;
-	padding: 5px;
+	padding-left: 15px;
 }
 
 .botao {
@@ -181,16 +178,28 @@
 }
 
 .curadoria {
-	grid-column-start: 1;
-	grid-row-start: 1;
-	grid-column-end: 3;
-	grid-row-end: 10; 
+	width: 100%;
+	padding-left: 500px;
+	padding-top: 70px;
+	padding-bottom: 200px;
 	font-family: monospace;
 	color: #ff0000;
-	font-size: 14px;
+	font-size: 0.75vw;
+	align-self: center;	
+}
+
+.hiperlink{
+	color: #ff0000;
 }
 
 .vernissage {
+	grid-column-start: 4;
+	grid-row-start: 10;
+	grid-column-end: 4;
+	grid-row-end: 10; 
+}
+
+.vernissagebutton {
 	color: #ff0000;
 	background: #ffffff;
 	width: 200px;
@@ -206,22 +215,121 @@
 	font-family: monospace;
 	color: #ff0000;
 	font-size: 14px;	
+	padding-bottom: 10px;
 }
 
-.grid {
-	margin-left: 500px;
-	margin-top: 100px;
-	grid-gap: 75px;
+.livrodevisita {
+	text-align: left;
 }
+
 
 .reddot{
-	cursor: url("https://live.staticflickr.com/65535/49744650617_cf1303f4ed_t.jpg"),auto;
+	cursor: url("https://live.staticflickr.com/65535/49744650617_cf1303f4ed_s.jpg") 5 15,auto;
+}
+
+.textocursor {
+	width: 300px;
+	height: 200px;	
+	font-family: monospace;
+	color: #000000;
+	font-size: 0.75vw;
+	z-index: 5;
+}
+
+.kurruimagem {
+	grid-column-start: 1;
+	grid-row-start: 13;
+	grid-column-end: 3;
+	grid-row-end: 17;
+	background-image: url("https://live.staticflickr.com/65535/49758440142_a94336565a_h.jpg");
+	
+	z-index: -1;
+}
+
+.kurrusamambaiamarrom {
+	grid-column-start: 1;
+	grid-row-start: 16;
+	grid-column-end: 1;
+	grid-row-end: 16;
+	padding-bottom: 100px;
+}
+
+.kurrusamambaiaarcoiro {
+	grid-column-start: 1;
+	grid-row-start: 13;
+	grid-column-end: 1;
+	grid-row-end: 13;
+	padding-left: 150px
+}
+
+.kurruplayer1 {
+	grid-column-start: 2;
+	grid-row-start: 15;
+	grid-column-end: 3;
+	grid-row-end: 16;
+	padding-top: 200px;
+	z-index: 2;
+}
+
+.kurruplayer2 {
+	grid-column-start: 1;
+	grid-row-start: 13;
+	grid-column-end: 1;
+	grid-row-end: 13;
+	z-index: 3;
+	padding-left: 500px;
+}
+
+.kurruplayer3 {
+	grid-column-start: 1;
+	grid-row-start: 15;
+	grid-column-end: 1;
+	grid-row-end: 15;
+	z-index: 3;
+}
+
+.kurruplayer4 {
+	grid-column-start: 2;
+	grid-row-start: 16;
+	grid-column-end: 2;
+	grid-row-end: 16;
+	padding-left: 20px;
+	z-index: 3;
+}
+
+.kurruhiponga {
+	grid-column-start: 1;
+	grid-row-start: 12;
+	grid-column-end: 1;
+	grid-row-end: 12;
+	padding-left: 250px;
+}
+
+.loremipsum {
+	padding-left: 900px;
+	padding-top: 300px;
+	color: #ffffff;
+}
+
+.loreips {
+	grid-column-start: 5;
+	grid-row-start: 1;
+	grid-column-end: 7;
+	grid-row-end: 12;
+	z-index: -1;
 }
 
 h1 {
-	text-align: center;
+	text-align: left;
 	font-size: 35px;
 	font-weight: normal;
+	padding-bottom: 75px;
+}
+
+h2 {
+	text-align: right;
+	font-size: 20px;
+	padding-top: 75px;
 }
 
 body {
@@ -235,77 +343,364 @@ body {
 <title>Lorem Ipsum</title>
 
 <body>
+	<div class="curadoria" id="curadoria">
+		<script>
+		$(document).ready(function(){
+		    $(document).mousemove(function(){
+			 if($("#curadoria:hover").length != 0){
+				$("span").parent().css({position: 'relative'});
+				$("span").css({top: event.pageY, left: event.pageX, position:'relative'});
+			    	$("span").text("  ");
+			} 
+		    });
+		});
+		</script>
 
-<h1 class="reddot" >Lorem Ipsum</h1>
+		<h1><a class="reddot hiperlink" href="https://br.lipsum.com/" target="_blank">Lorem Ipsum</a></h1>
+		<p> O nome desse espaço não se trata de um <a class="hiperlink reddot" href="https://www12.senado.leg.br/institucional/biblioteca/exposicoes/arquivo-biblioteca-e-museu-memoria-do-senado/videos" target="_blank">acidente gráfico</a>. Aqui é ocupado pela apropriação e subversão das mídias incontornáveis para os dias atuais. </p>
+	<p>Os trabalhos de <a class="hiperlink reddot" href="https://www.instagram.com/ex_miss_febem3/">Aleta Valente</a>, <a class="hiperlink reddot" href="https://cargocollective.com/anandatrezena" target="_blank">Ananda Trezena</a>, <a class="hiperlink" href="https://banda-ostensiva.bandcamp.com/" target="_blank">B.O.</a>, <a class="hiperlink" href="http://www.brunokurru.com" target="_blank">Bruno Kurru</a>, <a class="hiperlink" href="https://kauegarcia.wordpress.com/" target="_blank">Kauê Garcia</a>, <a class="hiperlink" href="https://pablovieira.weebly.com/" target="_blank">Pablo Vieira</a>, <a class="hiperlink" href="http://galerialeme.com/artist/raphael-escobar/" target="_blank">Raphael Escobar</a> e <a class="hiperlink" href="https://traplev.hotglue.me/?sobre	" target="_blank">Traplev</a> tomam forma específica no ambiente virtual, através de dispositivos próprios da internet, como aplicativos, anúncios, gifs, jogos, redes sociais, e plataformas de difusão de vídeos e sons, <a class="hiperlink" href="https://en.wikipedia.org/wiki/The_medium_is_the_message" target="_blank">que são transformados em meios da arte</a>.</p>
+	<p>O popular <a class="hiperlink" href="https://s3-sa-east-1.amazonaws.com/mundogum/wp-content/uploads/2007/10/lorem-ipsum.png" target="_blank">Lorem Ipsum</a> é um <a class="hiperlink" href="https://www.estantevirtual.com.br/livros/marco-tulio-cicero/do-sumo-bem-e-do-sumo-mal/631927131" target="_blank">texto recuperado da Antiguidade</a>, <a class="hiperlink" href="https://upload.wikimedia.org/wikipedia/commons/b/b0/Gutenberg_Bible.jpg" target="_blank">pela imprensa no século XVI</a>. Esses fragmentos sobreviveram até o mundo virtual, preservando a sua função original de dar a forma de um texto legível à configuração de uma página. Sugere um momento de elaboração e meditação criativa, um convite à ocupação dos espaços. Além de ter uma função gráfica, o texto era um referencial ético, trazendo reflexões sobre o cuidado de si, a morte, e o sumo bem e o sumo mal que se pode atingir em vida, temas que pulsam no momento atual. <a class="hiperlink" href="https://collectionapi.metmuseum.org/api/collection/v1/iiif/547955/1178532/main-image" target="_blank">Indica para a sobrevivência de práticas através da história, passando por crises e revoluções, se reinventando</a>. </p>
+	<p>Esse documento é retomado aqui pelo caráter de experimentação e negociação que ele indica. <a class="hiperlink" href="https://miro.medium.com/max/1400/0*Y4-T1BXpelsFVSXM.png" target="_blank">A internet, que aparece inicialmente como um campo aberto</a>, foi <a class="hiperlink" href="https://www.google.com/search?q=maiores+empresas+internet&oq=maiore&aqs=chrome.0.69i59l3j69i57j0l3j69i60.1199j0j7&sourceid=chrome&ie=UTF-8" target="_blank">sitiado pelo grande capital</a> e a crise atual se apresenta como uma oportunidade para <a class="hiperlink" href="https://vimeo.com/12784153" target="_blank">a retomada desse meio para o exercício da liberdade, autonomia, expressão e cura</a>.</p>
+	<p>Para tanto, os trabalhos tratam de assuntos latentes que se dividem em blocos penetráveis. O <b>gerenciamento de afetos</b> aparece em <i>@ex_miss_febem3</i> de Aleta Valente, <i>i am 2 sad 2 tell</i>, de Pablo Vieira, <i>Você conhece um bom lugar para terminar um relacionamento</i> de Ananda Trezena e <i>O</i> de Bruno Kurru. As relações travadas entre <b> publicidade, propaganda e ideologia </b> são exploradas em <i>Apologia</i> de Raphael Escobar, em <i>Espaço disponível</i> de Kauê Garcia, em <i>Retratos com e sem proprina</i> de Traplev, em <i>Ministério da Saúde adverte</i> de B.O. e também na proposta de Trezena. <b>Estruturas e políticas</b> são debatidas em <i>Batalha</b> de Kauê Garcia, em <b>Capitalismo</b> de Pablo Vieira, <i>Tripé Macroeconômico</i> de B.O. e também nos anteriormente citados <i>Ministério da Saúde adverte</i> e <i>Retratos com e sem propina</i>. Outras orquestrações podem ser pensadas. Nos trabalhos vemos embaçados os <a class="hiperlink" href="https://pt.symbolab.com/solver/limit-calculator" target="_blank">limites</a> entre a cultura popular e a erudita, entre o artístico e o cotidiano, os limites do real, entre o físico e o virtual, e apresentam provocações fundamentais para a construção de um novo mundo.</p>
+	<p>Criamos um <a class="hiperlink" href="https://images.squarespace-cdn.com/content/v1/52c75179e4b076c49f5c5a2e/1388800352472-PRLMWBMOYIZBCS9PN2BO/ke17ZwdGBToddI8pDm48kGhc112TDSmpe3inSkL-2HFZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIsHEHcMl5a9GNyKxAbFus1gv4kvFjxt9W6Mej9WJSavwKMshLAGzx4R3EDFOm1kBS/Maurice-Jarnoux-Andr%C3%A9-Malraux-selecting-photographs-for-Le-mus%C3%A9e-imaginaire-1947-Paris-Match.jpg?format=2500w" target="_blank">Museu imaginário atual</a>, <a class="hiperlink" href="https://www.youtube.com/watch?v=suEq9NqF91E" target="_blank">que apenas poderia acontecer nesse ambiente</a>.</p>
+		<h2>Érica Burini</h2>
+		<button class="vernissagebutton reddot" id="vernissage"  onclick="gotoVernissage()">
+		Vernissage
+		<script>
+		function gotoVernissage() {
+			window.open('https://hangouts.google.com/call/Vbo8Omm_52GU9DYclHZJAEEE', 'Vernissage', 'popup');
+		}	
+		</script>
+		</button>
+	</div>
 
-<div class="anuncieaqui" id="anuncieaqui">
-	<a href="mailto:kauegarcia@gmail.com?subject=Anuncie Aqui&body=Olá, gostaria de anunciar meu trabalho">
-	<img class="reddot" src="https://live.staticflickr.com/65535/49739246716_c5a76ed919_b.jpg"  height="150px" max-height="200px" alt="Anuncie Aqui"></img>
-	</a>
+<div class="apologia semcursor" id="apologia">
+	<img class="semcursor img-fluid" src="https://media.giphy.com/media/chJkTKikSgU8pxjdKr/source.gif" >
+	<script>
+	$(document).ready(function(){
+	    $(document).mousemove(function(){
+		 if($("#apologia:hover").length != 0){
+			$("span").parent().css({position: 'relative'});
+			$("span").css({top: event.pageY-screen.height-250, left: event.pageX, position:'absolute'});
+		    	$("span").text("Apologia - Raphael Escobar");
+		} else {
+			//$("span").text("");
+		}
+	    });
+	});
+	</script>
+	</img>
 </div>
 
-<div class="grid">
+<div class="textocursor" id="textoCursor">
+	<p><span></span></p>
+</div>
 
-	<div class="batalha">
-		<iframe  width="640" height="480" src="https://www.youtube.com/embed/TtUZBAvXBwk" frameborder="0" allow="autoplay; loop">
+
+
+<div class="grid container">
+
+	<div class="loreips">
+		<p class="loremipsum">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
+	<div class="anuncieaqui" id="anuncieaqui">
+		<a href="mailto:kauegarcia@gmail.com?subject=Anuncie Aqui&body=Olá, gostaria de anunciar meu trabalho">
+		<img class="semcursor" src="https://live.staticflickr.com/65535/49757110158_2ba061cdca_b.jpg"  height="1000px" width="1000px" max-height="1000px" alt="Anuncie Aqui">
+		<script>
+		$(document).ready(function(){
+		    $(document).mousemove(function(){
+			 if($("#anuncieaqui:hover").length != 0){
+				$("span").parent().css({position: 'relative'});
+				$("span").css({top: event.pageY-screen.height, left: event.pageX, position:'absolute'});
+			    	$("span").text("Espaço Disponível - Kauê Garcia");
+			} else {
+				//$("span").text("");
+			}
+		    });
+		});
+		</script>
+		</img>
+		</a>
+	</div>
+	<div class="batalha semcursor" id="batalha">	
+		<script>
+		$(document).ready(function(){
+		    $(document).mousemove(function(){
+			 if($("#batalha:hover").length != 0){
+				$("span").parent().css({position: 'relative'});
+				$("span").css({top: event.pageY, left: event.pageX, position:'absolute'});
+			    	$("span").text("Batalha - Kauê Garcia");
+			} else {
+				//$("span").text("");
+			}
+		    });
+		});
+		</script>
+		<iframe  class="semcursor" width="640" height="480" src="https://www.youtube.com/embed/TtUZBAvXBwk" frameborder="0" allow="autoplay; loop">	
 		</iframe>
 	</div>
 
-	<div class="capitalismo">
+	<div class="capitalismo semcursor" id="capitalismo">
 		<a  href="https://url.gratis/fvEPX" target="_blank">
-		 <img  class="reddot" src="https://pablovieira.weebly.com/uploads/9/9/5/9/99596286/2_orig.jpg" alt="Capitalismo">
+		 <img  class="semcursor" src="https://pablovieira.weebly.com/uploads/9/9/5/9/99596286/2_orig.jpg" alt="Capitalismo">
+		<script>
+		$(document).ready(function(){
+		    $(document).mousemove(function(){
+			 if($("#capitalismo:hover").length != 0){
+				$("span").parent().css({position: 'relative'});
+				$("span").css({top: event.pageY-screen.height, left: event.pageX, position:'absolute'});
+			    	$("span").text("Capitalismo - Pablo Vieira");
+			} else {
+				//$("span").text("");
+			}
+		    });
+		});
+		</script>
 		</a>
 	</div>
 
-	<div class="tripe">
-		<iframe style="cursor: none; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=421722217/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/transparent=true/" seamless><a class="semcursor" href="http://banda-ostensiva.bandcamp.com/album/trip-macroecon-mico">Tripé Macroeconômico by Banda Ostensiva</a></iframe>
+	<div class="tripe semcursor" id="tripe">
+		<iframe style="cursor: none; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=421722217/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/transparent=true/" seamless>
+		</iframe>
+		<script>
+		$(document).ready(function(){
+		    $(document).mousemove(function(){
+			 if($("#tripe:hover").length != 0){
+				$("span").parent().css({position: 'relative'});
+				$("span").css({top: event.pageY-screen.height, left: event.pageX, position:'absolute'});
+			    	$("span").text("Tripé Macroconômico - Banda Ostensiva");
+			} else {
+				//$("span").text("");
+			}
+		    });
+		});
+		</script>
 	</div>
 
 
-	<div class="sad"> 
+	<div class="sad semcursor" id="sad"> 
+		<script>
+		$(document).ready(function(){
+		    $(document).mousemove(function(){
+			 if($("#sad:hover").length != 0){
+				$("span").parent().css({position: 'relative'});
+				$("span").css({top: event.pageY-screen.height, left: event.pageX, position:'absolute'});
+			    	$("span").text("i am 2 sad 2 tell u - Pablo Vieira");
+			} else {
+				//$("span").text("");
+			}
+		    });
+		});
+		</script>
 		<iframe  class="semcursor" src="https://player.vimeo.com/video/313383354" width="640px" height="360px"  allow="autoplay; loop">
 		</iframe>
 	</div>
 
 
-	<div class="respiracao">
-	<iframe class="semcursor" style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2748401591/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/transparent=true/" allow="autoplay" seamless><a href="http://banda-ostensiva.bandcamp.com/album/minist-rio-da-sa-de-adverte">Ministério da Saúde adverte by Banda Ostensiva</a></iframe>
-
-	</div>
-
-	<div class="curadoria">
-	<h1>Lorem Ipsum</h1>
-	<p>
-
-O que é o Lorem Ipsum?
-
-O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que incluem versões do Lorem Ipsum.
-Porque é que o usamos?
-
-É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a uma distribuição mais ou menos normal de letras, ao contrário do uso de "Conteúdo aqui, conteúdo aqui", tornando-o texto legível. Muitas ferramentas de publicação electrónica e editores de páginas web usam actualmente o Lorem Ipsum como o modelo de texto usado por omissão, e uma pesquisa por "lorem ipsum" irá encontrar muitos websites ainda na sua infância. Várias versões têm evoluído ao longo dos anos, por vezes por acidente, por vezes propositadamente (como no caso do humor).
-
-De onde é que ele vem?
-
-Ao contrário da crença popular, o Lorem Ipsum não é simplesmente texto aleatório. Tem raízes numa peça de literatura clássica em Latim, de 45 AC, tornando-o com mais de 2000 anos. Richard McClintock, um professor de Latim no Colégio Hampden-Sydney, na Virgínia, procurou uma das palavras em Latim mais obscuras (consectetur) numa passagem Lorem Ipsum, e atravessando as cidades do mundo na literatura clássica, descobriu a sua origem. Lorem Ipsum vem das secções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), por Cícero, escrito a 45AC. Este livro é um tratado na teoria da ética, muito popular durante a Renascença. A primeira linha de Lorem Ipsum, "Lorem ipsum dolor sit amet..." aparece de uma linha na secção 1.10.32.
-
-O pedaço mais habitual do Lorem Ipsum usado desde os anos 1500 é reproduzido abaixo para os interessados. As secções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" do Cícero também estão reproduzidos na sua forma original, acompanhados pela sua tradução em Inglês, versões da tradução de 1914 por H. Rackham.
-Onde posso arranjar algum?
-
-Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maior parte sofreu alterações de alguma forma, pela injecção de humor, ou de palavras aleatórias que nem sequer parecem suficientemente credíveis. Se vai usar uma passagem do Lorem Ipsum, deve ter a certeza que não contém nada de embaraçoso escondido no meio do texto. Todos os geradores de Lorem Ipsum na Internet acabam por repetir porções de texto pré-definido, como necessário, fazendo com que este seja o primeiro verdadeiro gerador na Internet. Usa um dicionário de 200 palavras em Latim, combinado com uma dúzia de modelos de frases, para gerar Lorem Ipsum que pareçam razoáveis. Desta forma, o Lorem Ipsum gerado é sempre livre de repetição, ou de injecção humorística, etc.
-
-	</p>
-	<button class="vernissage reddot" id="vernissage"  onclick="gotoVernissage()">
-	Vernissage
+	<div class="respiracao semcursor" id="respiracao">
+	<iframe class="semcursor"  style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2748401591/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/transparent=true/" allow="autoplay" seamless>
+	</iframe>
 	<script>
-	function gotoVernissage() {
-		window.open('https://hangouts.google.com/call/Vbo8Omm_52GU9DYclHZJAEEE', 'Vernissage', 'popup');
-	}	
+	$(document).ready(function(){
+	    $(document).mousemove(function(){
+		 if($("#respiracao:hover").length != 0){
+			$("span").parent().css({position: 'relative'});
+			$("span").css({top: event.pageY-screen.height, left: event.pageX, position:'absolute'});
+		    	$("span").text("Ministerio da Saúde adverte - Banda Ostensiva");
+		} else {
+			//$("span").text("");
+		}
+	    });
+	});
 	</script>
-	</button>
 	</div>
+
+
+	<div id="instagram-feed-demo" class="exmissfebem semcursor">
+	<a href="https://www.instagram.com/ex_miss_febem3/" target="_blank">
+	<img class="semcursor"  id="exmissfebem" src="https://live.staticflickr.com/65535/49743892906_e33a013436_o.jpg">
+	<script>
+	$(document).ready(function(){
+	    $(document).mousemove(function(){
+		 if($("#exmissfebem:hover").length != 0){
+			$("span").parent().css({position: 'relative'});
+			$("span").css({top: event.pageY-screen.height, left: event.pageX, position:'absolute'});
+		    	$("span").text("@ex_miss_febem3 - Aleta Valente");
+		} else {
+			//$("span").text("");
+		}
+	    });
+	});
+	</script>
+	</img>
+	</a>
+	</div>  
+
+
+	<div class="traplev1 semcursor" id="traplev1">
+	<img src="https://media.giphy.com/media/XGO9La9zjLJzr3okN2/giphy.gif" width="431" height="480" frameBorder="0" allowFullScreen>
+	<script>
+	$(document).ready(function(){
+	    $(document).mousemove(function(){
+		 if($("#traplev1:hover").length != 0){
+			$("span").parent().css({position: 'relative'});
+			$("span").css({top: event.pageY-screen.height, left: event.pageX, position:'absolute'});
+		    	$("span").text("Série Retratos com Propina e Sem Propina - Traplev");
+		} else {
+			//$("span").text("");
+		}
+	    });
+	});
+	</script>
+	</img>
+	</div>
+
+
+
+	<div class="kurruimagem semcursor" id="kurruimagem">	
+		<script>
+		$(document).ready(function(){
+		    $(document).mousemove(function(){
+			 if($("#kurruimagem:hover").length != 0){
+				$("span").parent().css({position: 'relative'});
+				$("span").css({top: event.pageY-screen.height, left: event.pageX, position:'absolute'});
+			    	$("span").text("O - Bruno Kurru");
+			} else {
+				//$("span").text("");
+			}
+		    });
+		});
+		</script>
+	</div>
+
+	<div class="kurruplayer1 semcursor" id="kurruplayer1">
+		<script>
+		$(document).ready(function(){
+		    $(document).mousemove(function(){
+			 if($("#kurruplayer1:hover").length != 0){
+				$("span").parent().css({position: 'relative'});
+				$("span").css({top: event.pageY-screen.height, left: event.pageX, position:'absolute'});
+			    	$("span").text("O - Bruno Kurru");
+			} else {
+				//$("span").text("");
+			}
+		    });
+		});
+		</script>
+		<iframe class="sem cursor" width="560" height="315" src="https://www.youtube.com/embed/2LZQYr6jvzs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</iframe>
+	</div>
+
+
+	<div class="kurruplayer2 semcursor" id="kurruplayer2">
+		<script>
+		$(document).ready(function(){
+		    $(document).mousemove(function(){
+			 if($("#kurruplayer2:hover").length != 0){
+				$("span").parent().css({position: 'relative'});
+				$("span").css({top: event.pageY-screen.height, left: event.pageX, position:'absolute'});
+			    	$("span").text("O - Bruno Kurru");
+			} else {
+				//$("span").text("");
+			}
+		    });
+		});
+		</script>
+		<iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2Fexposicaoloremipsum%2F_o%2F" frameborder="0" ></iframe>
+	</div>
+
+	<div class="kurruplayer3 semcursor" id="kurruplayer3">
+		<script>
+		$(document).ready(function(){
+		    $(document).mousemove(function(){
+			 if($("#kurruplayer3:hover").length != 0){
+				$("span").parent().css({position: 'relative'});
+				$("span").css({top: event.pageY-screen.height, left: event.pageX, position:'absolute'});
+			    	$("span").text("O - Bruno Kurru");
+			} else {
+				//$("span").text("");
+			}
+		    });
+		});
+		</script>
+		<iframe width="55%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2Fexposicaoloremipsum%2F__o%2F" frameborder="0" ></iframe>
+	</div>
+
+	<div class="kurruplayer4 semcursor" id="kurruplayer4">
+		<script>
+		$(document).ready(function(){
+		    $(document).mousemove(function(){
+			 if($("#kurruplayer4:hover").length != 0){
+				$("span").parent().css({position: 'relative'});
+				$("span").css({top: event.pageY-screen.height, left: event.pageX, position:'absolute'});
+			    	$("span").text("O - Bruno Kurru");
+			} else {
+				//$("span").text("");
+			}
+		    });
+		});
+		</script>
+		<iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2Fexposicaoloremipsum%2Fo%2F" frameborder="0" ></iframe>
+	</div>
+	
+
+	<div class="kurrusamambaiamarrom" id="kurrusamambaiamarrom">
+		<script>
+		$(document).ready(function(){
+		    $(document).mousemove(function(){
+			 if($("#kurrusamambaiamarrom:hover").length != 0){
+				$("span").parent().css({position: 'relative'});
+				$("span").css({top: event.pageY-screen.height, left: event.pageX, position:'absolute'});
+			    	$("span").text("O - Bruno Kurru");
+			} else {
+				//$("span").text("");
+			}
+		    });
+		});
+		</script>
+		<img src="https://media.giphy.com/media/l4YNpVRflSaTuHLCkY/source.gif"  height="275">
+	</div>
+
+	<div class="kurruhiponga" id="kurruhiponga">
+		<script>
+		$(document).ready(function(){
+		    $(document).mousemove(function(){
+			 if($("#kurruhiponga:hover").length != 0){
+				$("span").parent().css({position: 'relative'});
+				$("span").css({top: event.pageY-screen.height, left: event.pageX, position:'absolute'});
+			    	$("span").text("O - Bruno Kurru");
+			} else {
+				//$("span").text("");
+			}
+		    });
+		});
+		</script>
+	<img src="https://media.giphy.com/media/gjTh10ELY2jN9sybbB/source.gif"></iframe>
+	</div>
+
+	<div class="kurrusamambaiaarcoiro" id="kurrusamambaiaarcoiro">
+		<script>
+		$(document).ready(function(){
+		    $(document).mousemove(function(){
+			 if($("#kurrusamambaiaarcoiro:hover").length != 0){
+				$("span").parent().css({position: 'relative'});
+				$("span").css({top: event.pageY-screen.height, left: event.pageX, position:'absolute'});
+			    	$("span").text("O - Bruno Kurru");
+			} else {
+				//$("span").text("");
+			}
+		    });
+		});
+		</script>
+		<img src="https://media.giphy.com/media/W5NpJNq79HgWR9SUap/source.gif" height="250" ></img>
+	</div>
+
+
 
     	<div class="comentario">
-		<h2>Livro de Visitas</h2>
+		<p class="livrodevisita">Livro de Visitas</p>
 		<label color="#ff0000" for="nome">
 		Nome
 		</label>
@@ -315,109 +710,66 @@ Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maio
 		<label color="#ff0000" for="comentario">
 		Comentário
 		</label>
-		<textarea id="comentario" color="#ff0000" type="text"
+		<textarea class="caixatexto" id="comentario" color="#ff0000" type="text"
 		     name="Ntext" size="15"></textarea>
 		<input class="botao" id="sent" type="button"  
 		     value="Enviar"> 
 		
 	</div>
+</div>
 
-	<div id="instagram-feed-demo" class="exmissfebem">
-	<a href="https://www.instagram.com/ex_miss_febem3/" target="_blank">
-	<img class="reddot" src="https://live.staticflickr.com/65535/49743892906_e33a013436_o.jpg">
+
+
+  <script>
+	/*
+	 setTimeout(function(){
+		var wCocaina = window.open("https://live.staticflickr.com/65535/49739524602_b19f98afa3_b.jpg", 'ApologiaCocaina', 'width=1023, height=363,resizable=0,popup, top=0, left=0')		
+	 }, 1500);
+
+	 setTimeout(function(){
+		var wBeck = window.open("https://live.staticflickr.com/65535/49739201231_0a1d90f1dc_b.jpg", "ApologiaBeck", 'width=1023, height=363,resizable=0,popup, top=450, left=0');
+	 }, 1500);
+
+	 setTimeout(function(){
+		var wDoce = window.open("https://live.staticflickr.com/65535/49738653223_c539f96699_b.jpg", "ApologiaDoce", 'width=1023, height=363,resizable=0,popup, top=450, left=1024');
+	 }, 1500);
+
+	 setTimeout(function(){
+		var wCrack = window.open("https://live.staticflickr.com/65535/49739201281_ef847475fa_b.jpg", "ApologiaCrack", 'width=1023, height=363,resizable=0,popup, top=0, left=1024');
+	 }, 1500);
+	*/
+  </script>
+
+
+
+<div class="termino" id="termino">
+	<a href="https://chat.whatsapp.com/IMCPtV8CwU19nneTYDMQsw" target="_blank">
+	<img class="blink-image semcursor" width="200px" max-width="250px" src="https://live.staticflickr.com/65535/49738653253_372aa83322_b.jpg">
+	<script>
+	$(document).ready(function(){
+	    $(document).mousemove(function(){
+		 if($("#termino:hover").length != 0){
+			$("span").parent().css({position: 'relative'});
+			$("span").css({top: event.pageY-screen.height, left: event.pageX+100, position:'absolute'});
+		    	$("span").text("Você conhece um bom lugar para terminar um relacionamento? - Ananda Trezena");
+		} 
+	    });
+	});
+	</script>
 	</img>
 	</a>
-	</div>
-
-	<div class="traplev1">
-	<img src="https://traplev.hotglue.me/?retratoscomesempropina.head.147611798347">
-	</img>
-	</div>
-
-	<div class="traplev2">
-	<img src="https://traplev.hotglue.me/?retratoscomesempropina.head.147611937053">
-	</img>
-	</div>
 
 	<div class="primeiro">
 	<p color="#ffffff">bem-vinde</p>
 	</div>
 
 	<div class="ultimo">
-	<p color="#ffffff">bye bye</p>
+	<p color="#ffffff">bye bye bitches</p>
 	</div>
 
-</div>
 
-  <script>
-
-
-	/*
-	function abrirEscobar() {
-		var wCocaina = window.open("https://live.staticflickr.com/65535/49739524602_b19f98afa3_b.jpg", 'ApologiaCocaina', 'width=1023, height=363,resizable=0,popup, top=450, left=0')		
-		//wCocaina.write("<title>Apologia - Raphael Escobar</title><img src='https://live.staticflickr.com/65535/49739524602_b19f98afa3_b.jpg'></img>");
-		wCocaina.title("Apologia - Raphael Escobar")
-		//wCocaina.close();
-
-		var wBeck = window.open("https://live.staticflickr.com/65535/49739201231_0a1d90f1dc_b.jpg", "ApologiaBeck", 'width=1023, height=363,resizable=0,popup, top=450, left=0'));
-		wBeck.write("<title>Apologia - Raphael Escobar</title><img src='https://live.staticflickr.com/65535/49739201231_0a1d90f1dc_b.jpg'></img>");
-		//wBeck.close();
-
-		var wDoce = window.open("https://live.staticflickr.com/65535/49738653223_c539f96699_b.jpg", "ApologiaDoce");
-		wDoce.write("<title>Apologia - Raphael Escobar</title><img src='https://live.staticflickr.com/65535/49738653223_c539f96699_b.jpg'></img>");
-		//wDoce.close();
-
-		var wCrack = window.open("https://live.staticflickr.com/65535/49739201281_ef847475fa_b.jpg", "ApologiaCrack", );
-		wCrack.write("<title>Apologia - Raphael Escobar</title><img src='https://live.staticflickr.com/65535/49739201281_ef847475fa_b.jpg'></img>");
-		//wCrack.close();
-	}*/
-
-	 setTimeout(function(){
-		var wCocaina = window.open("https://live.staticflickr.com/65535/49739524602_b19f98afa3_b.jpg", 'ApologiaCocaina', 'width=1023, height=363,resizable=0,popup, top=450, left=0')		
-		wCocaina.document.body.innerHTML = "<title>Apologia - Raphael Escobar</title><img src='https://live.staticflickr.com/65535/49739524602_b19f98afa3_b.jpg'></img>";
-
-	 }, 1500);
-
-	 setTimeout(function(){
-		var wBeck = window.open("https://live.staticflickr.com/65535/49739201231_0a1d90f1dc_b.jpg", "ApologiaBeck", 'width=1023, height=363,resizable=0,popup, top=450, left=0');
-		wBeck.title("Apologia - Raphael Escobar");
-		wBeck.close();
-
-	 }, 1500);
-
-	 setTimeout(function(){
-		var wDoce = window.open("https://live.staticflickr.com/65535/49738653223_c539f96699_b.jpg", "ApologiaDoce", 'width=1023, height=363,resizable=0,popup, top=450, left=1024');
-		wDoce.title("Apologia - Raphael Escobar");
-		wDoce.close();
-	 }, 1500);
-
-	 setTimeout(function(){
-		var wCrack = window.open("https://live.staticflickr.com/65535/49739201281_ef847475fa_b.jpg", "ApologiaCrack", 'width=1023, height=363,resizable=0,popup, top=0, left=1024');
-		wCrack.write("Apologia - Raphael Escobar"));
-		wCrack.close();
-	 }, 1500);
-	
-	//setTimeout(() => window.open("https://live.staticflickr.com/65535/49739201231_0a1d90f1dc_b.jpg","Apologia2",'width=1023, height=363,resizable=0,popup, top=450, left=0'), 1500);
-	//setTimeout(() => window.open("https://live.staticflickr.com/65535/49738653223_c539f96699_b.jpg","Apologia3",'width=1023, height=363,resizable=0,popup, top=450, left=1024'), 1500);
-	//setTimeout(() => window.open("https://live.staticflickr.com/65535/49739201281_ef847475fa_b.jpg","Apologia4",'width=1023, height=363,resizable=0,popup, top=0, left=1024'), 1500);
-  </script>
-
-
-
-<div class="termino">
-	<a href="https://chat.whatsapp.com/IMCPtV8CwU19nneTYDMQsw" target="_blank">
-	<img class="blink-image reddot" width="200px" max-width="250px" src="https://live.staticflickr.com/65535/49738653253_372aa83322_b.jpg">
-	</img>
-	</a>
 </div>
 
 </body>
-
-<!--
-<footer>
-	<div class="mapinha">
-	<img  width=90% alt="mapinha" src="https://www.galeriaartefato.com/uploads/8/6/8/9/86890782/planta-galeria-b_1_orig.jpg">
-	</div>
-</footer> -->
 
 </html>
